@@ -1,19 +1,17 @@
 const randomOptions = [
   [
     "will",
-    "will not",
+    "won't",
     "might",
     "might not",
-    "probably",
-    "probably not",
-    "possibly",
-    "possibly not",
-    "presumably",
-    "presumably not",
+    "probably will",
+    "probably won't",
+    "possibly will",
+    "possibly won't",
     "may",
     "may not",
   ],
-  ["get", "have"],
+  ["get"],
   [
     "an amazing",
     "an awesome",
@@ -53,4 +51,13 @@ const fYatesShuffle = (arr) => {
     arr[j] = k;
   }
   return arr[0];
+}
+
+const messageMixer = () => {
+  return 'You ' + randomOptions.map(i => fYatesShuffle(i)).join(' ');
+}
+
+//Test program:
+for(let i=0; i<10; i++){
+  console.log(messageMixer());
 }
