@@ -55,6 +55,4 @@ const messageMixer = () => {
 }
 
 //Test program:
-for(let i=0; i<10; i++){
-  console.log(messageMixer());
-}
+console.log(messageMixer());
